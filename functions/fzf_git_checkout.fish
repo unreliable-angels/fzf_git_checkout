@@ -1,4 +1,10 @@
 function fzf_git_checkout -d "fzf source to checkout git branch"
+    git rev-parse --is-inside-work-tree >/dev/null ^/dev/null
+
+    if not test $status -eq 0
+        return
+    end
+
     git branch -a | fzf | tr -d ' ' | read branch
 
     if test -n "$branch"

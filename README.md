@@ -4,6 +4,7 @@ fZf source to checkout git branch.
 
 ## Prerequisites
 
+- git
 - fzf
 
 ## Installation
