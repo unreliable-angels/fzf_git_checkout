@@ -1,5 +1,5 @@
 function fzf_git_checkout -d "fzf source to checkout git branch"
-    git rev-parse --is-inside-work-tree >/dev/null ^/dev/null
+    git rev-parse --is-inside-work-tree >/dev/null 2>&1
 
     if not test $status -eq 0
         command echo 'fzf_git_checkout: Not a git repository'
